@@ -1,0 +1,27 @@
+{
+  "CONTRACT_ADDRESS": "0xEE858e36A9a647E9eDB74f1E11942Fe73464A100",
+  "SCAN_LINK": "https://etherscan.io/address/0xA543653d8b02146a29bF9b1902382C2c233AF637",
+  "NETWORK": {
+    "NAME": "Ethereum Rinkeby",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NETWORK_ID_WALLET": 4,
+  "NFT_NAME": "Forgetfuls NFT",
+  "SYMBOL": "FRGT",
+  "MAX_SUPPLY": 6543,
+  "WEI_COST_OG": 100000000000000000,
+  "DISPLAY_COST_OG": 0.07,
+  "WEI_COST_WL": 180000000000000000,
+  "DISPLAY_COST_WL": 0.07,
+  "WEI_COST_PU": 220000000000000000,
+  "DISPLAY_COST_PU": 0.08,
+  "MAX_LIMIT_OG": 10,
+  "MAX_LIMIT_WL": 7,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opeansea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/mutant-age-camel-club",
+  "SHOW_BACKGROUND": true
+
+  
+}
