@@ -29,7 +29,7 @@ function Home() {
   const [feedback, setFeedback] = useState("");
   const [statusAlert, setStatusAlert] = useState("");
   const [mintAmount, setMintAmount] = useState(1);
-  const [displayCost, setDisplayCost] = useState(0);
+  const [displayCost, setDisplayCost] = useState(0.7);
   const [state, setState] = useState(-1);
   const [nftCost, setNftCost] = useState(-1);
   const [canMintWL, setCanMintWL] = useState(false);
@@ -197,7 +197,7 @@ function Home() {
       let wlCost = await contract.methods.costWL().call();
       setDisplayCost(web3.utils.fromWei(wlCost));
       setNftCost(web3.utils.fromWei(wlCost));
-      setStatusAlert("WHITELIST IS NOW LIVE!");
+      setStatusAlert("MINT IS NOW LIVE!");
       setFeedback("Are you Whitelisted Member?");
 
       let wlMax = await contract.methods.maxMintAmountWL().call();

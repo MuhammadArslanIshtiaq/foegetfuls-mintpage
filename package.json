@@ -1,5 +1,5 @@
 {
-  "name": "AceMiners",
+  "name": "forgetfuls-nfts",
   "version": "1.0.0",
   "description": "Mint Your Aceminers NFTs",
   "private": true,
@@ -27,7 +27,7 @@
     "web3-eth-contract": "^1.7.0",
     "web3modal": "^1.9.5"
   },
-  "author": "Waleed Arshad",
+  "author": "Arsi Khan",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
