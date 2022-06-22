@@ -142,6 +142,7 @@ function Home() {
         // be required to derive the Merkle Trees root hash.
         const hexProof = merkleTree.getHexProof(claimingAddress);
         setProof(hexProof);
+        console.log({ hexProof });
         let mintWL = merkleTree.verify(hexProof, claimingAddress, rootHash);
         console.log({ mintWL });
         let mintWLContractMethod = await blockchain.smartContract.methods
@@ -176,7 +177,7 @@ function Home() {
     const abi = await abiResponse.json();
     var contract = new Contract(
       abi,
-      "0xEE858e36A9a647E9eDB74f1E11942Fe73464A100"
+      "0xc7E281a2C47D529F9B26Ba7b3cDE10FD2a85EE51"
     );
     contract.setProvider(web3.currentProvider);
     // Get Total Supply
