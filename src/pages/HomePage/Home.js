@@ -200,7 +200,7 @@ function Home() {
       setDisplayCost(web3.utils.fromWei(wlCost));
       setNftCost(web3.utils.fromWei(wlCost));
       setStatusAlert("MINT IS NOW LIVE!");
-      setFeedback("Are you Whitelisted Member?");
+      // setFeedback("Are you Whitelisted Member?");
 
       let wlMax = await contract.methods.maxMintAmountWL().call();
       console.log({ wlMax });
