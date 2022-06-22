@@ -147,6 +147,7 @@ function Home() {
         let mintWLContractMethod = await blockchain.smartContract.methods
           .isWhitelisted(blockchain.account, hexProof)
           .call();
+        console.log({ mintWLContractMethod });
         if (mintWLContractMethod && mintWL) {
           setCanMintWL(mintWL);
           console.log(mintWL);
@@ -192,7 +193,7 @@ function Home() {
       setStatusAlert("MINT NOT LIVE YET!");
       setDisable(true);
       setDisplayCost(0.0);
-      setMax(0);
+      setmerklerootax(0);
     } else if (currentState == 1) {
       let wlCost = await contract.methods.costWL().call();
       setDisplayCost(web3.utils.fromWei(wlCost));
