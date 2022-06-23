@@ -29,7 +29,7 @@ function Home() {
   const [feedback, setFeedback] = useState("");
   const [statusAlert, setStatusAlert] = useState("");
   const [mintAmount, setMintAmount] = useState(1);
-  const [displayCost, setDisplayCost] = useState(0.7);
+  const [displayCost, setDisplayCost] = useState(0.05543);
   const [state, setState] = useState(-1);
   const [nftCost, setNftCost] = useState(-1);
   const [canMintWL, setCanMintWL] = useState(false);
@@ -103,7 +103,7 @@ function Home() {
       newMintAmount = 0;
     }
     setMintAmount(newMintAmount);
-    setDisplayCost(parseFloat(nftCost * newMintAmount).toFixed(2));
+    setDisplayCost(parseFloat(nftCost * newMintAmount).toFixed(5));
   };
 
   const incrementMintAmount = () => {
@@ -115,14 +115,14 @@ function Home() {
     newMintAmount > max ? (newMintAmount = max) : newMintAmount;
     console.log(mintAmount);
     console.log(max);
-    setDisplayCost(parseFloat(nftCost * newMintAmount).toFixed(2));
+    setDisplayCost(parseFloat(nftCost * newMintAmount).toFixed(5));
     setMintAmount(newMintAmount);
   };
 
   const maxNfts = () => {
     setMintAmount(max);
     console.log(max);
-    setDisplayCost(parseFloat(nftCost * max).toFixed(2));
+    setDisplayCost(parseFloat(nftCost * max).toFixed(5));
   };
 
   const getData = async () => {
