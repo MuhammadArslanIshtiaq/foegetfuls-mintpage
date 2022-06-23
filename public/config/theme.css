@@ -72,8 +72,7 @@ body {
   padding: 40px 80px;
   background-color: rgba(46, 134, 222, 0.7) !important;
   width: 60vw;
-  height: 70vh;
-  border-radius: 10px;
+  border-radius: 15px;
   color: #fff;
   z-index: 999;
   
@@ -100,8 +99,7 @@ body {
 @media screen and (max-width:1024px) {
 
   .imgOnTop {
-    width: 100vw;
-    height: 90vh;    
+    width: 100vw; 
     background-color: rgba(46, 134, 222, 0.6) !important;
   }
 

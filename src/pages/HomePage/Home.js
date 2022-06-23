@@ -244,18 +244,54 @@ function Home() {
       <img alt={"logo"} className="logo" src="config/images/logo.gif" />
 
       <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
-        <div className="imgOnTop">
-          <h1 className="heading">Mint is not live</h1>
-          <p className="bodyText">Mint Date: 24th June 2022</p>
-          <br />
-          <p className="bodyText">
-            Mint Time: <Countdown date={"June 24, 2022 00:00:00 GMT-00:00"} />
-          </p>
-          <br />
-          <p className="bodyText">Price: 0.06543</p>
-          <br />
-          <p className="bodyText">Public Price: 0.07</p>
-        </div>
+        <s.Mint>
+          <s.TextTitle
+            size={3.0}
+            style={{
+              letterSpacing: "3px",
+            }}
+          >
+            MINT IS NOT LIVE
+          </s.TextTitle>
+
+          <s.SpacerSmall />
+          <s.SpacerLarge />
+
+          <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
+            <s.TextTitle>Mint Date</s.TextTitle>
+            <s.TextTitle color={"var(--secondary)"}>24th June 2022</s.TextTitle>
+          </s.FlexContainer>
+
+          <s.SpacerSmall />
+          <s.Line />
+          <s.SpacerSmall />
+
+          <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
+            <s.TextTitle>Mint Time</s.TextTitle>
+            <s.TextTitle color={"var(--secondary)"}>
+              <Countdown date={"June 24, 2022 00:00:00 GMT-00:00"} />
+            </s.TextTitle>
+          </s.FlexContainer>
+
+          <s.SpacerSmall />
+          <s.Line />
+          <s.SpacerSmall />
+
+          <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
+            <s.TextTitle>Mint Price</s.TextTitle>
+            <s.TextTitle color={"var(--secondary)"}>0.06543</s.TextTitle>
+          </s.FlexContainer>
+
+          <s.SpacerSmall />
+          <s.Line />
+          <s.SpacerSmall />
+
+          <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
+            <s.TextTitle>Public Price</s.TextTitle>
+            <s.TextTitle color={"var(--secondary)"}>0.07</s.TextTitle>
+          </s.FlexContainer>
+        </s.Mint>
+
         <s.Mint style={{ display: "none" }}>
           <s.TextTitle
             size={3.0}
