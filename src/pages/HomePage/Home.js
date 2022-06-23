@@ -244,7 +244,7 @@ function Home() {
       <img alt={"logo"} className="logo" src="config/images/logo.gif" />
 
       <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
-        <s.Mint>
+        <s.Mint style={{ zIndex: "999", marginTop: "150px" }}>
           <s.TextTitle
             size={3.0}
             style={{
