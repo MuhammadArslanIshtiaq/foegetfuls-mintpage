@@ -68,10 +68,18 @@ function Home() {
     setLoading(true);
     // setDisable(true);
 
+    const estGas = blockchain.smartContract.methods
+      .mint(mintAmount, proof)
+      .estimateGas({
+        from: blockchain.account,
+        to: CONFIG.CONTRACT_ADDRESS,
+      });
+    console.log({ estGas });
+
     blockchain.smartContract.methods
       .mint(mintAmount, proof)
       .send({
-        gasLimit: String(totalGasLimit),
+        gasLimit: estGas,
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
         value: totalCostWei,

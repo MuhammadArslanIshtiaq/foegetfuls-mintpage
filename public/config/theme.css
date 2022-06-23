@@ -9,10 +9,19 @@
 
 body {
   background-image: url("./images/bg-02.jpg") !important; 
-  background-color: #83FFC3 !important; 
+  background-color: #90ece9 !important; 
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top ;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-image: url("./images/bg-mobile.png") !important; 
+    background-size: 90vw !important;
+
+  }
+  
 }
 
 .flexContainer {
