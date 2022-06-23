@@ -243,12 +243,7 @@ function Home() {
       {loading && <Loader />}
       <img alt={"logo"} className="logo" src="config/images/logo.gif" />
 
-      <s.FlexContainer
-        jc={"center"}
-        ai={"center"}
-        fd={"row"}
-        style={{ position: "relative" }}
-      >
+      <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
         <div className="imgOnTop">
           <h1 className="heading">Mint is not live</h1>
           <p className="bodyText">Mint Date: 24th June 2022</p>
@@ -261,7 +256,7 @@ function Home() {
           <br />
           <p className="bodyText">Public Price: 0.07</p>
         </div>
-        <s.Mint>
+        <s.Mint style={{ display: "none" }}>
           <s.TextTitle
             size={3.0}
             style={{

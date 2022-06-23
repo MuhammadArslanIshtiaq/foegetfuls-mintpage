@@ -68,12 +68,11 @@ body {
 }
 
 .imgOnTop {
-  position: absolute;
-  top: 50;
-  left: 50;
-  background-color: rgba(46, 134, 222, 1);
+ 
+  padding: 40px 80px;
+  background-color: rgba(46, 134, 222, 0.7) !important;
   width: 60vw;
-  height: 90vh;
+  height: 70vh;
   border-radius: 10px;
   color: #fff;
   z-index: 999;
@@ -83,7 +82,7 @@ body {
 
 .heading{ 
   font-size: 48px;   
-  padding: 80px 0;
+  padding: 60px 0;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -102,7 +101,8 @@ body {
 
   .imgOnTop {
     width: 100vw;
-    height: 90vh;
+    height: 90vh;    
+    background-color: rgba(46, 134, 222, 0.6) !important;
   }
 
   .heading{ 
