@@ -5,7 +5,7 @@ import { fetchData } from "./../../redux/data/dataActions";
 import * as s from "./../../styles/globalStyles";
 import whitelistAddresses from "../walletAddresses";
 import Loader from "../../components/Loader/loader";
-import { NavLogo } from "../../components/Navbar/Navbar.element";
+import Countdown from "react-countdown";
 
 const { createAlchemyWeb3, ethers } = require("@alch/alchemy-web3");
 var Web3 = require("web3");
@@ -194,7 +194,7 @@ function Home() {
       setStatusAlert("MINT NOT LIVE YET!");
       setDisable(true);
       setDisplayCost(0.0);
-      setmerklerootax(0);
+      //setmerklerootax(0);
     } else if (currentState == 1) {
       let wlCost = await contract.methods.costWL().call();
       setDisplayCost(web3.utils.fromWei(wlCost));
@@ -243,7 +243,24 @@ function Home() {
       {loading && <Loader />}
       <img alt={"logo"} className="logo" src="config/images/logo.gif" />
 
-      <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
+      <s.FlexContainer
+        jc={"center"}
+        ai={"center"}
+        fd={"row"}
+        style={{ position: "relative" }}
+      >
+        <div className="imgOnTop">
+          <h1 className="heading">Mint is not live</h1>
+          <p className="bodyText">Mint Date: 24th June 2022</p>
+          <br />
+          <p className="bodyText">
+            Mint Time: <Countdown date={"June 24, 2022 00:00:00 GMT-00:00"} />
+          </p>
+          <br />
+          <p className="bodyText">Price: 0.06543</p>
+          <br />
+          <p className="bodyText">Public Price: 0.07</p>
+        </div>
         <s.Mint>
           <s.TextTitle
             size={3.0}

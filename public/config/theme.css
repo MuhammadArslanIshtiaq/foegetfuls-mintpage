@@ -66,3 +66,34 @@ body {
   justify-content: flex-start;
     width: 200px;
 }
+
+.imgOnTop {
+  position: absolute;
+  top: 50;
+  left: 50;
+  background-color: rgba(46, 134, 222, 1);
+  width: 60vw;
+  height: 90vh;
+  border-radius: 10px;
+  color: #fff;
+  
+}
+
+.heading{ 
+  font-size: 48px;   
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.bodyText{
+  font-size: 36px;
+  display: flex;
+  justify-content: center;  
+  text-transform: uppercase;
+  margin: 0 auto;
+
+}
+
+
