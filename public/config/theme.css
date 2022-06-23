@@ -8,7 +8,8 @@
 }
 
 body {
-  background-image: url("./images/bg-02.jpg") !important;  
+  background-image: url("./images/bg-02.jpg") !important; 
+  background-color: #83FFC3 !important; 
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top ;
@@ -62,8 +63,9 @@ body {
 }
 
 .logo{
-  position: fixed;
-  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
   width: 200px;
 }
 

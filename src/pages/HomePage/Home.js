@@ -67,6 +67,7 @@ function Home() {
     setClaimingNft(true);
     setLoading(true);
     // setDisable(true);
+
     blockchain.smartContract.methods
       .mint(mintAmount, proof)
       .send({
@@ -241,7 +242,7 @@ function Home() {
   return (
     <>
       {loading && <Loader />}
-      <img alt={"logo"} className="logo" src="config/images/logo.gif" />
+      {/* <img alt={"logo"} className="logo" src="config/images/logo.gif" /> */}
 
       <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
         <s.Mint style={{ zIndex: "999", marginTop: "150px" }}>
