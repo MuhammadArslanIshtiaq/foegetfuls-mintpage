@@ -267,9 +267,9 @@ function Home() {
           <s.SpacerSmall />
 
           <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
-            <s.TextTitle>Mint Time</s.TextTitle>
+            <s.TextTitle>Mint Starts</s.TextTitle>
             <s.TextTitle color={"var(--secondary)"}>
-              <Countdown date={"June 24, 2022 00:00:00 GMT-00:00"} />
+              <Countdown date={"June 24, 2022 14:00:00 GMT-00:00"} />
             </s.TextTitle>
           </s.FlexContainer>
 
