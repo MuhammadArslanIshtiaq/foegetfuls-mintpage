@@ -278,7 +278,7 @@ function Home() {
           <s.SpacerSmall />
 
           <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
-            <s.TextTitle>Mint Price</s.TextTitle>
+            <s.TextTitle>Whitelist Price</s.TextTitle>
             <s.TextTitle color={"var(--secondary)"}>0.06543</s.TextTitle>
           </s.FlexContainer>
 
