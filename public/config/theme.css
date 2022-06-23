@@ -76,8 +76,10 @@ body {
   height: 90vh;
   border-radius: 10px;
   color: #fff;
+  z-index: 999;
   
 }
+
 
 .heading{ 
   font-size: 48px;   
@@ -94,6 +96,24 @@ body {
   text-transform: uppercase;
   margin: 0 auto;
 
+}
+
+@media screen and (max-width:1024px) {
+
+  .imgOnTop {
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .heading{ 
+    font-size: 32px;   
+  }
+
+  .bodyText{
+    font-size: 24px;
+  
+  }
+  
 }
 
 
