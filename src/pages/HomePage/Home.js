@@ -147,10 +147,11 @@ function Home() {
       let nftMintedByUser = await blockchain.smartContract.methods
       .mintableAmountForUser(blockchain.account)
       .call();
-      setMax(nftMintedByUser);
+      // setMax(nftMintedByUser);
       console.log( {nftMintedByUser});
 
       if (currentState == 1) {
+        setMax(nftMintedByUser);
         nftMintedByUser != 0 ? setDisable(false) : setDisable(true);
         const claimingAddress = keccak256(blockchain.account);
         // `getHexProof` returns the neighbour leaf and all parent nodes hashes that will
@@ -169,7 +170,7 @@ function Home() {
           setDisable(true);
         }
       } else {
-        setFeedback(`Welcome, you can mint up to ${nftMintedByUser} NFTs per transaction`);
+        setFeedback(`Welcome, you can mint up to 10 NFTs per transaction`);
       }
     }
   };
