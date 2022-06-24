@@ -56,7 +56,7 @@ function Home() {
     SHOW_BACKGROUND: false,
   });
 
-  const claimNFTs = () => {
+  const claimNFTs = async () => {
     let cost = nftCost;
     cost = Web3.utils.toWei(String(cost), "ether");
 
@@ -68,7 +68,7 @@ function Home() {
     setLoading(true);
     // setDisable(true);
 
-    const estGas = blockchain.smartContract.methods
+    const estGas = await blockchain.smartContract.methods
       .mint(mintAmount, proof)
       .estimateGas({
         from: blockchain.account,
@@ -186,7 +186,7 @@ function Home() {
     const abi = await abiResponse.json();
     var contract = new Contract(
       abi,
-      "0xc7E281a2C47D529F9B26Ba7b3cDE10FD2a85EE51"
+      "0xA30E07978E3E7d439E97c9E94edCBaB627440E97"
     );
     contract.setProvider(web3.currentProvider);
     // Get Total Supply
