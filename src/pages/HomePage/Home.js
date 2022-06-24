@@ -103,6 +103,7 @@ function Home() {
           });
 
         dispatch(fetchData(blockchain.account));
+        getData();
       });
   };
 
@@ -116,14 +117,9 @@ function Home() {
   };
 
   const incrementMintAmount = () => {
-    console.log(mintAmount);
-    console.log(max);
     let newMintAmount = mintAmount + 1;
-    console.log(newMintAmount);
 
     newMintAmount > max ? (newMintAmount = max) : newMintAmount;
-    console.log(mintAmount);
-    console.log(max);
     setDisplayCost(parseFloat(nftCost * newMintAmount).toFixed(5));
     setMintAmount(newMintAmount);
   };
@@ -145,30 +141,35 @@ function Home() {
         .currentState()
         .call();
       setState(currentState);
+      console.log(currentState);
+
+      //  no of nfts minted by user
+      let nftMintedByUser = await blockchain.smartContract.methods
+      .mintableAmountForUser(blockchain.account)
+      .call();
+      setMax(nftMintedByUser);
+      console.log( {nftMintedByUser});
+
       if (currentState == 1) {
+        nftMintedByUser != 0 ? setDisable(false) : setDisable(true);
         const claimingAddress = keccak256(blockchain.account);
         // `getHexProof` returns the neighbour leaf and all parent nodes hashes that will
         // be required to derive the Merkle Trees root hash.
         const hexProof = merkleTree.getHexProof(claimingAddress);
         setProof(hexProof);
-        console.log({ hexProof });
         let mintWL = merkleTree.verify(hexProof, claimingAddress, rootHash);
-        console.log({ mintWL });
         let mintWLContractMethod = await blockchain.smartContract.methods
           .isWhitelisted(blockchain.account, hexProof)
           .call();
-        console.log({ mintWLContractMethod });
         if (mintWLContractMethod && mintWL) {
           setCanMintWL(mintWL);
-          console.log(mintWL);
-          setFeedback(`Welcome Whitelist Member, you can mint up to 2 NFTs`);
-          setDisable(false);
+          setFeedback(`Welcome Whitelist Member, you can mint up to ${nftMintedByUser} NFTs`);
         } else {
           setFeedback(`Sorry, your wallet is not on the whitelist`);
           setDisable(true);
         }
       } else {
-        setFeedback(`Welcome, you can mint up to 5 NFTs per transaction`);
+        setFeedback(`Welcome, you can mint up to ${nftMintedByUser} NFTs per transaction`);
       }
     }
   };
@@ -212,7 +213,6 @@ function Home() {
       // setFeedback("Are you Whitelisted Member?");
 
       let wlMax = await contract.methods.maxMintAmountWL().call();
-      console.log({ wlMax });
       setMax(wlMax);
     } else {
       let puCost = await contract.methods.cost().call();
@@ -393,7 +393,7 @@ function Home() {
                 onClick={(e) => {
                   e.preventDefault();
                   claimNFTs();
-                  getData();
+                  
                 }}
               >
                 {claimingNft ? "Confirm Transaction in Wallet" : "Mint"}

@@ -7,6 +7,90 @@
     "type": "constructor"
   },
   {
+    "inputs": [
+      
+    ],
+    "name": "ApprovalCallerNotOwnerNorApproved",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "ApprovalQueryForNonexistentToken",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "ApprovalToCurrentOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "ApproveToCaller",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "BalanceQueryForZeroAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "MintToZeroAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "MintZeroQuantity",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "OwnerQueryForNonexistentToken",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "TransferCallerNotOwnerNorApproved",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "TransferFromIncorrectOwner",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "TransferToNonERC721ReceiverImplementer",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      
+    ],
+    "name": "TransferToZeroAddress",
+    "type": "error"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -108,12 +192,12 @@
         "type": "address"
       }
     ],
-    "name": "OGedAddresses",
+    "name": "addressMintedBalance",
     "outputs": [
       {
-        "internalType": "bool",
+        "internalType": "uint256",
         "name": "",
-        "type": "bool"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -127,7 +211,7 @@
         "type": "address"
       }
     ],
-    "name": "addressMintedBalance",
+    "name": "addressMintedBalanceWL",
     "outputs": [
       {
         "internalType": "uint256",
@@ -226,21 +310,6 @@
     "inputs": [
       
     ],
-    "name": "costOG",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      
-    ],
     "name": "costWL",
     "outputs": [
       {
@@ -323,70 +392,12 @@
         "type": "bytes32[]"
       }
     ],
-    "name": "isOGed",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "_merkleProof",
-        "type": "bytes32[]"
-      }
-    ],
     "name": "isWhitelisted",
     "outputs": [
       {
         "internalType": "bool",
         "name": "",
         "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_user",
-        "type": "uint256"
-      }      
-    ],
-    "name": "mintableAmountForUser",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      
-    ],
-    "name": "maxMintAmountOG",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -441,47 +452,12 @@
     "inputs": [
       
     ],
-    "name": "merkleRootOG",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      
-    ],
     "name": "merkleRootWhitelist",
     "outputs": [
       {
         "internalType": "bytes32",
         "name": "",
         "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
- 
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
-      }
-    ],
-    "name": "metadataOf",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
       }
     ],
     "stateMutability": "view",
@@ -509,14 +485,18 @@
   },
   {
     "inputs": [
-      
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
     ],
-    "name": "name",
+    "name": "mintableAmountForUser",
     "outputs": [
       {
-        "internalType": "string",
+        "internalType": "uint256",
         "name": "",
-        "type": "string"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -526,12 +506,12 @@
     "inputs": [
       
     ],
-    "name": "nftPerAddressLimitWL",
+    "name": "name",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "string",
         "name": "",
-        "type": "uint256"
+        "type": "string"
       }
     ],
     "stateMutability": "view",
@@ -599,36 +579,6 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-      }
-    ],
-    "name": "removeFromOGClaimedUsers",
-    "outputs": [
-      
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-      }
-    ],
-    "name": "removeFromWhitelistClaimedUser",
-    "outputs": [
-      
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
       
     ],
     "name": "renounceOwnership",
@@ -640,11 +590,7 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "randomNumber",
-        "type": "uint256"
-      }
+      
     ],
     "name": "reveal",
     "outputs": [
@@ -725,21 +671,6 @@
   },
   {
     "inputs": [
-      
-    ],
-    "name": "seed",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
       {
         "internalType": "address",
         "name": "operator",
@@ -792,11 +723,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_limit",
+        "name": "_newMaxSupply",
         "type": "uint256"
       }
     ],
-    "name": "setNftPerAddressLimitWL",
+    "name": "setMaxSupply",
     "outputs": [
       
     ],
@@ -820,39 +751,9 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_newCost",
-        "type": "uint256"
-      }
-    ],
-    "name": "setOGCost",
-    "outputs": [
       
     ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "_merkleRoot",
-        "type": "bytes32"
-      }
-    ],
-    "name": "setOGMerkleRoot",
-    "outputs": [
-      
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      
-    ],
-    "name": "setOnlyOg",
+    "name": "setOnlyEarlyAccess",
     "outputs": [
       
     ],
@@ -920,21 +821,6 @@
       }
     ],
     "name": "setWhitelistMerkleRoot",
-    "outputs": [
-      
-    ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_newmaxMintAmount",
-        "type": "uint256"
-      }
-    ],
-    "name": "setmaxMintAmountOG",
     "outputs": [
       
     ],
@@ -1077,25 +963,6 @@
       
     ],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "name": "whitelistedAddresses",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {

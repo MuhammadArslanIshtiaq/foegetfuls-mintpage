@@ -2,7 +2,7 @@
   "CONTRACT_ADDRESS": "0xA30E07978E3E7d439E97c9E94edCBaB627440E97",
   "SCAN_LINK": "https://etherscan.io/address/0xA543653d8b02146a29bF9b1902382C2c233AF637",
   "NETWORK": {
-    "NAME": "Ethereum Rinkeby",
+    "NAME": "Ethereum",
     "SYMBOL": "ETH",
     "ID": 1
   },
