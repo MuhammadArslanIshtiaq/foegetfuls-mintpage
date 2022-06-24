@@ -299,6 +299,17 @@ function Home() {
             <s.TextTitle>Public Price</s.TextTitle>
             <s.TextTitle color={"var(--secondary)"}>0.07</s.TextTitle>
           </s.FlexContainer>
+
+          <s.SpacerSmall />
+          <s.Line />
+          <s.SpacerSmall />
+
+          <s.FlexContainer fd={"row"} ai={"center"} jc={"space-between"}>
+            <s.TextTitle>Public Mint Time</s.TextTitle>
+            <s.TextTitle color={"var(--secondary)"}>
+              <Countdown date={"June 24, 2022 15:00:00 GMT-00:00"} />
+            </s.TextTitle>
+          </s.FlexContainer>
         </s.Mint>
 
         <s.Mint style={{ display: "none" }}>
