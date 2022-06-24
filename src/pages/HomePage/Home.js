@@ -145,10 +145,10 @@ function Home() {
 
       //  no of nfts minted by user
       let nftMintedByUser = await blockchain.smartContract.methods
-      .mintableAmountForUser(blockchain.account)
-      .call();
+        .mintableAmountForUser(blockchain.account)
+        .call();
       // setMax(nftMintedByUser);
-      console.log( {nftMintedByUser});
+      console.log({ nftMintedByUser });
 
       if (currentState == 1) {
         setMax(nftMintedByUser);
@@ -164,7 +164,9 @@ function Home() {
           .call();
         if (mintWLContractMethod && mintWL) {
           setCanMintWL(mintWL);
-          setFeedback(`Welcome Whitelist Member, you can mint up to ${nftMintedByUser} NFTs`);
+          setFeedback(
+            `Welcome Whitelist Member, you can mint up to ${nftMintedByUser} NFTs`
+          );
         } else {
           setFeedback(`Sorry, your wallet is not on the whitelist`);
           setDisable(true);
@@ -261,7 +263,7 @@ function Home() {
               letterSpacing: "3px",
             }}
           >
-            MINT IS NOT LIVE
+            MINT IS NOT LIVE !
           </s.TextTitle>
 
           <s.SpacerSmall />
@@ -394,7 +396,6 @@ function Home() {
                 onClick={(e) => {
                   e.preventDefault();
                   claimNFTs();
-                  
                 }}
               >
                 {claimingNft ? "Confirm Transaction in Wallet" : "Mint"}
