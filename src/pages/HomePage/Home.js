@@ -68,18 +68,18 @@ function Home() {
     setLoading(true);
     // setDisable(true);
 
-    const estGas = await blockchain.smartContract.methods
-      .mint(mintAmount, proof)
-      .estimateGas({
-        from: blockchain.account,
-        to: CONFIG.CONTRACT_ADDRESS,
-      });
-    console.log({ estGas });
+    // const estGas = await blockchain.smartContract.methods
+    //   .mint(mintAmount, proof)
+    //   .estimateGas({
+    //     from: blockchain.account,
+    //     to: CONFIG.CONTRACT_ADDRESS,
+    //   });
+    // console.log({ estGas });
 
     blockchain.smartContract.methods
       .mint(mintAmount, proof)
       .send({
-        gasLimit: estGas,
+        gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
         from: blockchain.account,
         value: totalCostWei,
@@ -175,7 +175,7 @@ function Home() {
 
   const getDataWithAlchemy = async () => {
     const web3 = createAlchemyWeb3(
-      "https://eth-rinkeby.alchemyapi.io/v2/DWS-10QG2tUKcNhG_nUqMvkRQT8pwwyv"
+      "https://eth-mainnet.alchemyapi.io/v2/DWS-10QG2tUKcNhG_nUqMvkRQT8pwwyv"
     );
     const abiResponse = await fetch("/config/abi.json", {
       headers: {

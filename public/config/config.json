@@ -4,9 +4,9 @@
   "NETWORK": {
     "NAME": "Ethereum Rinkeby",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
-  "NETWORK_ID_WALLET": 4,
+  "NETWORK_ID_WALLET": 1,
   "NFT_NAME": "Forgetfuls NFT",
   "SYMBOL": "FRGT",
   "MAX_SUPPLY": 6543,
