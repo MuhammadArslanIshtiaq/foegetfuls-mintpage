@@ -256,7 +256,7 @@ function Home() {
       {/* <img alt={"logo"} className="logo" src="config/images/logo.gif" /> */}
 
       <s.FlexContainer jc={"center"} ai={"center"} fd={"row"}>
-        <s.Mint style={{ zIndex: "999", marginTop: "150px" }}>
+        {/* <s.Mint style={{ zIndex: "999", marginTop: "150px" }}>
           <s.TextTitle
             size={3.0}
             style={{
@@ -313,9 +313,9 @@ function Home() {
               <Countdown date={"June 24, 2022 15:00:00 GMT-00:00"} />
             </s.TextTitle>
           </s.FlexContainer>
-        </s.Mint>
+        </s.Mint> */}
 
-        <s.Mint style={{ display: "none" }}>
+        <s.Mint>
           <s.TextTitle
             size={3.0}
             style={{
